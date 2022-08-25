@@ -16,7 +16,7 @@ public class MadLibsGame {
         return _game;
     }
 
-    //update 
+    update 
     public bool UpdateGame(int gameID, Game newgame) {
         Game? oldGame = _game.Find(game => game.GameID == gameID);
 
@@ -26,7 +26,7 @@ public class MadLibsGame {
             oldGame.Text2 = newgame.Text2 != "" ? newgame.Text2 : oldGame.Text2;
         }
         //delete
-        public bool RemoveGame(int gameID) {
+    public bool RemoveGame(int gameID) {
             Game itemToDelete = _game.Find(game => game.GameID == gameID);
 
             bool deleteGame = _game.Remove(itemToDelete);
@@ -36,37 +36,40 @@ public class MadLibsGame {
     }
 }
 
-public class GameOutput {
-    protected readonly List<MadLibs> _madlib = new List<MadLibs>();
-    //create
-    public bool AddMadLib(MadLibs item) {
-        int prevCount = _madlib.Count;
+// public class GameOutput {
+//     protected readonly List<MadLibs> _madlib = new List<MadLibs>();
+//     //create
+//     public bool AddMadLib(MadLibs item) {
+//         int prevCount = _madlib.Count;
 
-        _madlib.Add(item);
+//         _madlib.Add(item);
 
-        return prevCount < _madlib.Count ? true : false;
-    }
-    //read 
-    public List<MadLibs> GetAllTemplates() {
-        return _madlib;
-    }
+//         return prevCount < _madlib.Count ? true : false;
+//     }
+//     //read 
+//     public List<MadLibs> GetAllTemplates() {
+//         return _madlib;
+//     }
+// }
 
     //update
-    public bool UpdateMadLib(int madLibID, MadLibs newItem) {
-        MadLibs? oldItem = _madlib.Find(item => item.MadLibID == madLibID);
+//     public bool UpdateMadLib(int madLibID, MadLibs newItem) {
+//         MadLibs? oldItem = _madlib.Find(item => item.MadLibID == madLibID);
 
-        if(oldItem != null) {
-            oldItem.Sentence1 = newItem.Sentence1 != "" ? newItem.Sentence1 : oldItem.Sentence1;
-            oldItem.Sentence2 = newItem.Sentence2 != "" ? newItem.Sentence2 : oldItem.Sentence2;
-            oldItem.Sentence3 = newItem.Sentence3 != "" ? newItem.Sentence3 : oldItem.Sentence3;
-        }
+//         if(oldItem != null) {
+//             oldItem.Sentence1 = newItem.Sentence1 != "" ? newItem.Sentence1 : oldItem.Sentence1;
+//             oldItem.Sentence2 = newItem.Sentence2 != "" ? newItem.Sentence2 : oldItem.Sentence2;
+//             oldItem.Sentence3 = newItem.Sentence3 != "" ? newItem.Sentence3 : oldItem.Sentence3;
+//         }
+//     }
+// }
 
-        public bool RemoveMadLib(int madLibID) {
-            MadLibs? itemToDelete = _madlib.Find(item => item.MadLibID == madLibID);
+    //     public bool RemoveMadLib(int madLibID) {
+    //         MadLibs? itemToDelete = _madlib.Find(item => item.MadLibID == madLibID);
 
-            bool deleteMadLib = _madlib.Remove(itemToDelete);
+    //         bool deleteMadLib = _madlib.Remove(itemToDelete);
 
-            return deleteMadLib;
-        }
-    }
-}
+    //         return deleteMadLib;
+    //     }
+    // }
+    

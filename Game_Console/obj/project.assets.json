@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Game_Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Game_Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Game_Repository.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Game_Repository/1.0.0": {
+      "type": "project",
+      "path": "../Game_Repository/Game_Repository.csproj",
+      "msbuildProject": "../Game_Repository/Game_Repository.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Game_Repository >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\mallo\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\ElevenFiftyAcademy149\\ElevenFiftyAcademy149\\codingFoundations\\assignments\\pairGame\\Game_Repository\\Game_Repository.csproj": {
+              "projectPath": "C:\\ElevenFiftyAcademy149\\ElevenFiftyAcademy149\\codingFoundations\\assignments\\pairGame\\Game_Repository\\Game_Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
